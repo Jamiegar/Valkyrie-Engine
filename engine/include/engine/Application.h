@@ -1,4 +1,6 @@
 #pragma once
+#include <engine/platform/Window.h>
+#include <memory>
 
 namespace Engine
 {
@@ -15,6 +17,7 @@ namespace Engine
         void Update(float dt);
         void Render();
 
+        std::unique_ptr<Window> m_Window;
         bool m_Running = true;
     };
 }
